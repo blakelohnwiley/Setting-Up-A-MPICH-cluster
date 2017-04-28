@@ -81,12 +81,6 @@ then
 	sudo mount ub0:/mirror /mirror
 	echo "remounting all partitions by issuing this on all the slave nodes:"
 	sudo mount -a
-	echo "Defining a user mpiu for running mpi programs"
-	sudo useradd mpiu
-	echo "changing ownership of ./mirror from user u0 to mpiu"
-	sudo chown mpiu /mirror
-	echo "Installing SSH Server"
-	sudo apt-get install openssh server
 elif [ "$Computer_Name" = "ub2" ]
 then
 	echo "Setting up the hostnames on slave server"
@@ -114,13 +108,6 @@ then
 	sudo mount ub0:/mirror /mirror
 	echo "remounting all partitions by issuing this on all the slave nodes:"
 	sudo mount -a
-	echo "Defining a user for running MPI programs"
-	echo "Defining a user mpiu for running mpi programs"
-	sudo useradd mpiu
-	echo "changing ownership of ./mirror from user u0 to mpiu"
-	sudo chown mpiu /mirror
-	echo "Installing SSH Server"
-	sudo apt-get install openssh server
 elif [ "$Computer_Name" = "ub3" ]
 then
 	echo "Setting up the hostnames on slave server"
@@ -148,11 +135,4 @@ then
 	sudo mount ub0:/mirror /mirror
 	echo "remounting all partitions by issuing this on all the slave nodes:"
 	sudo mount -a
-	echo "Defining a user for running MPI programs"
-	echo "Defining a user mpiu for running mpi programs"
-	sudo useradd mpiu
-	echo "changing ownership of ./mirror from user u0 to mpiu"
-	sudo chown mpiu /mirror
-	echo "Installing SSH Server"
-	sudo apt-get install openssh server
 fi
