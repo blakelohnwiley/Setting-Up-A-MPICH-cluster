@@ -15,10 +15,10 @@ if [ "$Computer_Name" = "ub0" ]
 then
 	echo "Setting up the hostnames on master server"
 	echo >> /etc/hosts
-	echo >> "192.168.133.100 ub0"
-	echo >> "192.168.133.101 ub1"
-	echo >> "192.168.133.102 ub2"
-	echo >> "192.168.133.103 ub3"
+	echo "192.168.133.100 ub0" >> /etc/hosts
+	echo "192.168.133.101 ub1" >> /etc/hosts
+	echo "192.168.133.102 ub2" >> /etc/hosts
+	echo "192.168.133.103 ub3" >> /etc/hosts
 	echo "Installing nfs-server on master"
 	sudo apt-get install nfs-server
 	echo "Updating the masters interfaces"
@@ -44,15 +44,15 @@ then
 	echo "Defining a user mpiu for running mpi programs"
 	sudo chown mpiu /mirror
 	echo "Installing SSH Server"
-	sudo apt-get install openssh-server
+	sudo apt-get install openssh server
 elif [ "$Computer_Name" = "ub1" ]
 then 
 	echo "Setting up the hostnames on slave server"
 	echo >> /etc/hosts
-	echo >> "192.168.133.100 ub0"
-	echo >> "192.168.133.101 ub1"
-	echo >> "192.168.133.102 ub2"
-	echo >> "192.168.133.103 ub3"
+	echo "192.168.133.100 ub0" >> /etc/hosts
+	echo "192.168.133.101 ub1" >> /etc/hosts
+	echo "192.168.133.102 ub2" >> /etc/hosts
+	echo "192.168.133.103 ub3" >> /etc/hosts
 	echo "Installing nfs-client on slave"
 	sudo apt-get install nfs-client
 	echo "Updating the slaves interfaces"
@@ -75,15 +75,15 @@ then
 	echo "Defining a user mpiu for running mpi programs"
 	sudo chown mpiu /mirror
 	echo "Installing SSH Server"
-	sudo apt-get install openssh-server
+	sudo apt-get install openssh server
 elif [ "$Computer_Name" = "ub2" ]
 then
 	echo "Setting up the hostnames on slave server"
 	echo >> /etc/hosts
-	echo >> "192.168.133.100 ub0"
-	echo >> "192.168.133.101 ub1"
-	echo >> "192.168.133.102 ub2"
-	echo >> "192.168.133.103 ub3"
+	echo "192.168.133.100 ub0" >> /etc/hosts
+	echo "192.168.133.101 ub1" >> /etc/hosts
+	echo "192.168.133.102 ub2" >> /etc/hosts
+	echo "192.168.133.103 ub3" >> /etc/hosts
 	echo "Installing nfs-client on slave"
 	sudo apt-get install nfs-client
 	echo "Updating the slaves interfaces"
@@ -106,15 +106,15 @@ then
 	echo "Defining a user for running MPI programs"
 	sudo chown mpiu /mirror
 	echo "Installing SSH Server"
-	sudo apt-get install openssh-server
+	sudo apt-get install openssh server
 elif [ "$Computer_Name" = "ub3" ]
 then
 	echo "Setting up the hostnames on slave server"
 	echo >> /etc/hosts
-	echo >> "192.168.133.100 ub0"
-	echo >> "192.168.133.101 ub1"
-	echo >> "192.168.133.102 ub2"
-	echo >> "192.168.133.103 ub3"
+	echo "192.168.133.100 ub0" >> /etc/hosts
+	echo "192.168.133.101 ub1" >> /etc/hosts
+	echo "192.168.133.102 ub2" >> /etc/hosts
+	echo "192.168.133.103 ub3" >> /etc/hosts
 	echo "Installing nfs-client on slave"
 	sudo apt-get install nfs-client
 	echo "Updating the slaves interfaces"
@@ -137,5 +137,5 @@ then
 	echo "Defining a user for running MPI programs"
 	sudo chown mpiu /mirror
 	echo "Installing SSH Server"
-	sudo apt-get install openssh-server
+	sudo apt-get install openssh server
 fi
