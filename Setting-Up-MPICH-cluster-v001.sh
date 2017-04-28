@@ -45,6 +45,13 @@ then
 	sudo chown mpiu /mirror
 	echo "Installing SSH Server"
 	sudo apt-get install openssh server
+	echo "Setting up passwordless SSH for communication between nodes"
+	su - mpiu
+	echo "Then we generate an RSA key pair for mpiu:"
+	ssh­-keygen ­-t rsa
+	echo "Next, we add this key to authorized keys:"
+	cd .ssh
+	cat id_rsa.pub >> authorized_keys
 elif [ "$Computer_Name" = "ub1" ]
 then 
 	echo "Setting up the hostnames on slave server"
