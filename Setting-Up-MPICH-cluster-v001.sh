@@ -44,7 +44,7 @@ then
 	echo "Defining a user mpiu for running mpi programs"
 	sudo chown mpiu /mirror
 	echo "Installing SSH Server"
-	sudo apt­-get install openssh-server
+	sudo apt-get install openssh-server
 elif [ "$Computer_Name" = "ub1" ]
 then 
 	echo "Setting up the hostnames on slave server"
@@ -75,7 +75,7 @@ then
 	echo "Defining a user mpiu for running mpi programs"
 	sudo chown mpiu /mirror
 	echo "Installing SSH Server"
-	sudo apt­-get install openssh-server
+	sudo apt-get install openssh-server
 elif [ "$Computer_Name" = "ub2" ]
 then
 	echo "Setting up the hostnames on slave server"
@@ -106,7 +106,7 @@ then
 	echo "Defining a user for running MPI programs"
 	sudo chown mpiu /mirror
 	echo "Installing SSH Server"
-	sudo apt­-get install openssh-server
+	sudo apt-get install openssh-server
 elif [ "$Computer_Name" = "ub3" ]
 then
 	echo "Setting up the hostnames on slave server"
@@ -137,5 +137,5 @@ then
 	echo "Defining a user for running MPI programs"
 	sudo chown mpiu /mirror
 	echo "Installing SSH Server"
-	sudo apt­-get install openssh-server
+	sudo apt-get install openssh-server
 fi
