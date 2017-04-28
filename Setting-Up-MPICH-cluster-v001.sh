@@ -7,7 +7,7 @@
 # set the font size to 24
 setfont /usr/share/consolefonts/Lat7-Terminus28x14.psf
 # install depepdent packages
-Computer_Name=${uname -n}
+Computer_Name=$(uname -n)
 sudo apt-get update
 sudo apt-get install build-essential
 sudo apt-get upgrade
