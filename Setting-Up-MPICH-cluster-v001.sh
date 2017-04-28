@@ -10,6 +10,7 @@ setfont /usr/share/consolefonts/Lat7-Terminus28x14.psf
 Computer_Name=${uname -n}
 sudo apt-get update
 sudo apt-get install build-essential
+sudo apt-get upgrade
 if [ "$Computer_Name" = "ub0" ]
 then
 	echo "Setting up the hostnames on master server"
