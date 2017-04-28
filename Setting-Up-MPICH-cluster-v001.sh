@@ -42,13 +42,15 @@ then
 	echo "Editing the fstab file"
 	echo "ub0:/mirror    /mirror    nfs" >> /etc/fstab
 	echo "Defining a user mpiu for running mpi programs"
+	sudo useradd mpiu
+	echo "changing ownership of ./mirror from user u0 to mpiu"
 	sudo chown mpiu /mirror
 	echo "Installing SSH Server"
 	sudo apt-get install openssh server
 	echo "Setting up passwordless SSH for communication between nodes"
 	su - mpiu
 	echo "Then we generate an RSA key pair for mpiu:"
-	ssh­-keygen ­-t rsa
+	ssh-keygen -t rsa
 	echo "Next, we add this key to authorized keys:"
 	cd .ssh
 	cat id_rsa.pub >> authorized_keys
